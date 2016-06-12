@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "outFile": "public/all.js",
+    "sourceMap": true
+  },
+  "files": [
+    "frontend/Blog/Controllers.ts",
+    "frontend/Blog/Factories.ts",
+    "frontend/Blog/Models.ts",
+    "frontend/Blog/Scopes.ts",
+    "frontend/Blog/index.ts",
+    "frontend/User/Controllers.ts",
+    "frontend/User/Models.ts",
+    "frontend/User/Scopes.ts",
+    "frontend/User/index.ts",
+    "frontend/index.ts"
+  ]
+}

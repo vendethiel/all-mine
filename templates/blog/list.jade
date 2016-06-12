@@ -1,0 +1,15 @@
+h1 List
+
+ul
+    li(ng-repeat="article in articles")
+        span.remove-article(ng-show="user.admin")
+            a(ng-click="removeArticle($index)")= '[x] '
+        a(href="/blog/{{article._id}}") {{article.title}}
+
+.add-article-container(ng-show="user.admin")
+    button(ng-click="showForm = !showForm")
+        span(ng-hide="showForm") Ajouter un article
+        span(ng-show="showForm") Cacher le formulaire
+
+    div(ng-show="showForm")
+        include ./form

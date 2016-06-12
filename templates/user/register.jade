@@ -1,0 +1,13 @@
+form(ng-submit="submit()")
+    fieldset
+        legend Inscription
+        .form-control
+            input#username(ng-model="username")
+            label(for="username") Identifiant
+        .form-control
+            input#password(ng-model="password" type="password")
+            label(for="password") Mot de passe
+        .form-control
+            input#admin(ng-model="admin" type="checkbox")
+            label(for="admin") Administrateur ?
+        input(type="submit" value="Inscription")

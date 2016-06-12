@@ -1,0 +1,27 @@
+{
+  "name": "mean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "express": "^4.13.4",
+    "body-parser": "^1.15.1",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.19",
+    "passport": "^0.3.2",
+    "passport-local-mongoose": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "jade": "^1.11.0"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "jade": "jade --hierarchy -w templates/ -o public/"
+  },
+  "author": "",
+  "license": "ISC"
+}

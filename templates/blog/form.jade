@@ -1,0 +1,9 @@
+form(ng-controller="BlogFormCtrl" ng-submit="save()")
+    fieldset
+        .align.form-group
+            label(for="title")
+            input.form-control(id="title" ng-model="new.title" placeholder="Titre")
+        .align.form-group
+            label(for="content")
+            textarea(id="content" ng-model="new.content" placeholder="Contenu")
+        input.btn.btn-success.form-control(type="submit" value="Ajouter")

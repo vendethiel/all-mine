@@ -1,0 +1,5 @@
+form(ng-controller="BlogCommentFormCtrl" ng-submit="save()")
+    fieldset
+        .align.form-group
+            textarea(id="content" ng-model="new.content" placeholder="Contenu")
+        input.btn.btn-success.form-control(type="submit" value="Ajouter")

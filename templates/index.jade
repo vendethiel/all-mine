@@ -1,0 +1,19 @@
+doctype html
+html(ng-app="app", lang="fr")
+  head
+    title Salut
+    base(href="/")
+    meta(charset="utf-8")
+  body
+    fieldset#userbox
+      legend Utilisateur
+      div(ng-show="user")
+        | Vous êtes connecté en tant que {{user.username}}{{user.admin ? ' (admin)' : ''}}
+        = '. '
+        | #[a(href="/api/user/logout" target="_self") Déconnexion].
+      div(ng-hide="user") Vous êtes déconnecté. #[a(href="user/login") Connexion] ou #[a(href="user/register") Inscription].
+    .container(ng-view)
+    script(src="angular/angular.js")
+    script(src="angular-resource/angular-resource.js")
+    script(src="angular-route/angular-route.js")
+    script(src="all.js")

@@ -1,0 +1,17 @@
+h1 {{article.title}}
+
+pre {{article.content}}
+
+// show comments when they exist, or when we can post one
+fieldset.comments(ng-show="user || comments.length")
+    legend Commentaires {{comments.length ? '(' + comments.length + ')' : ''}}
+
+    ul.comment-list
+        li(ng-repeat="comment in comments")
+            span(ng-show="user.admin || user._id == comment.user_id" ng-click="deleteComment($index)") [x]
+            span.author(ng-show="comment.username")
+                | (par {{comment.username}})
+            pre {{comment.content}}
+
+    .add-comment(ng-show="user")
+        include ../comment/form
